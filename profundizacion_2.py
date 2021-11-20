@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,36 +12,35 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica numérica y cadenas
+# Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un programa que consulte por consola:
-- El nombre completo de la persona
-- El DNI de la persona
-- La edad de la persona
-- La altura de la persona
-
-Finalmente el programa debe imprimir dos líneas de texto por separado
-- En una línea imprimir el nombre completo y el DNI, aclarando de que
-  campo se trata cada uno
-        Ej: Nombre Completo: Nombre Apellido , DNI:35205070,
-- En la segunda línea se debe imprimir el nombre completo, edad y
-  altura de la persona
-  Nuevamente debe aclarar el campo de cada uno, para el que lo lea
-  entienda de que se está hablando.
+Realice un programa que solicite el ingreso de tres números
+enteros, y luego en cada caso informe si el número es par
+o impar.
+Para cada caso imprimir el resultado en pantalla.
 '''
 
-print('Sistema de ingreso de datos')
+print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
 
-print('Ingrese su nombre:')
-nombre = str(input())
-print('Ingrese su DNI sin puntos:')
-dni = int(input())
-print('Ingrese su edad:')
-edad = int(input())
-print('Ingrese su altura:')
-altura = float(input())
+print('A continuacion, se le pedira que ingrese 3 numeros enteros: ')
 
-print('El nombre ingresado es:' ,nombre, 'y su DNI es:' ,dni)
-print('El nombre ingresado es:' ,nombre, 'su edad es:' ,edad, 'y su altura es:' ,altura)
+numero1 = int(input('Ingrese su primer numero: '))
+numero2 = int(input('Ingrese su segundo numero: '))
+numero3 = int(input('Ingrese su tercer numero: '))
+
+if numero1 % 2 == 0:
+    print('El numero {} es par'.format(numero1))
+else:
+    print('El numero {} es impar'.format(numero1))
+
+if numero2 % 2 == 0:
+    print('El numero {} es par'.format(numero2))
+else:
+    print('El numero {} es impar'.format(numero2))
+
+if numero3 % 2 == 0:
+    print('El numero {} es par'.format(numero3))
+else:
+    print('El numero {} es impar'.format(numero3))

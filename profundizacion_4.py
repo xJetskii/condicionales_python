@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,46 +12,74 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica numérica y cadenas
+# Ejercicios de práctica con texto
 '''
 Enunciado:
-Realice un programa que determine cual sería el apellido de una persona
-al ingresara los dos nombres completos de sus padres.
-En definitiva se solicita crear una variable nueva que reuna
-los apellidos.
+Realice un programa que solicite por consola 3 palabras cualesquiera
+Luego el programa debe consultar al usuario como quiere ordenar las palabras
+1 - Ordenar por orden alfabético (usando el operador ">")
+2 - Ordenar por cantidad de letras (longitud de la palabra (len) y operador ">")
 
-- Primero el programa debe consultar el nombre completo del padre_1
-- Luego el programa debe consultar el nombre completo del padre_2
-- Luego debe consultar el nombre del hijo/a
-- Debe extraer los apellidos de los padres (ver la nota al final)
-- Luego formar el nombre completo del hijo/a utilizando los apellidos
-  de sus padres y el nombre ingresado de dicha persona
-- Imprimir en pantalla el resultado
+Si se ingresa "1" por consola se deben ordenar las 3 palabras por orden alfabético
+e imprimir en pantalla de la mayor a la menor
 
-NOTA: Para extraer el apellido del nombre completo recomendamos usar
-el método "split"
-Mostraremos un ejemplo:
+Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
+e imprimir en pantalla de la mayor a la menor
 
-direccion_completa = 'Monroe 2716'
-calle, altura = direccion_completa.split(' ')
-
-Les dejo por su cuenta a que busquen un poco más acerca de este método
-que seguramente utilizarán mucho de acá en adelante.
-Les dejamos un link con algunos ejemplos más:
-https://www.pythonforbeginners.com/dictionary/python-split
-
-Cualquier duda con el método split pueden consultarla por el campus
+IMPORTANTE: Para ordenar las palabras deben realizar condicionales compuestos o anidados,
+no se busca utilizar bucles o algoritmos de ordenamiento ya que aún no hemos llegado a ese
+contenido.
 '''
 
-print('Jugando con texto')
+print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
 
-print('Ingrese el nombre completo de su padre:')
-padre = str(input())
-print('Ingrese el nombre completo de su madre:')
-madre = str(input())
-print('Ingrese el nombre del hijo:')
-hijo = str(input())
-nombrepapa, apellidopapa = padre.split(' ')
-nombremama, apellidomama = madre.split(' ')
-print('El nombre del hijo es:',hijo, apellidopapa, apellidomama)
+palabra1 = str(input('Ingrese la primer palabra: '))
+palabra2 = str(input('Ingrese la segunda palabra: '))
+palabra3 = str(input('Ingresar la tercer palabra: '))
+
+print('Elija como ordenar las palabras: ')
+print('1-Ordenar por orden alfabetico')
+print('2-Ordenar por cantidad de letras')
+
+opcion = int(input())
+
+
+if opcion == 1:
+    if palabra1 > palabra2:
+        if palabra1 > palabra3:
+            if palabra2 > palabra3:
+                print(palabra3, palabra2, palabra1)
+            else:
+                print(palabra2, palabra3, palabra1)
+        elif palabra3 > palabra1:
+            print(palabra2, palabra1, palabra3)
+
+    elif palabra2 > palabra1:
+        if palabra2 > palabra3:
+            if palabra3 > palabra1:
+                print(palabra1, palabra3, palabra2)
+            else:
+                print(palabra3, palabra1, palabra2)
+        else:
+            print(palabra1, palabra2, palabra3)
+
+
+elif opcion == 2:
+    if len(palabra1) > len(palabra2):
+        if len(palabra1) > len(palabra3):
+            if len(palabra2) > len(palabra3):
+                print(palabra1, palabra2, palabra3)
+            else:
+                print(palabra1, palabra3, palabra2)
+        elif len(palabra3) > len(palabra1):
+            print(palabra3, palabra1, palabra2)
+
+    elif len(palabra2) > len(palabra1):
+        if len(palabra2) > len(palabra3):
+            if len(palabra3) > len(palabra1):
+                print(palabra2, palabra3, palabra1)
+            else:
+                print(palabra2, palabra1, palabra3)
+        else:
+            print(palabra3, palabra2, palabra1)

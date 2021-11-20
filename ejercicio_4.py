@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -9,22 +9,50 @@
 
 # Ejemplos variables de texto
 
-# Ingrese tres palabras y arme un acrónimo con ellas
-# Si desea puede modificar el código para ingresar más palabras
-print('Ingrese palabra 1:')
-palabra_1 = str(input())
+texto_1 = '5'
+texto_2 = '7'
 
-print('Ingrese palabra 2:')
-palabra_2 = str(input())
+# 1-Verifique cual de los dos textos es mayor alfabéticamente
+# La comparación alfabética es aquella que se logra cuando
+# se utiliza el operador mayor o menor con Strings (textos)
+# Imprima en pantalla según corresponda
 
-print('Ingrese palabra 3:')
-palabra_3 = str(input())
+if texto_1 > texto_2:
+    print('{} es mayor a {}'.format(texto_1, texto_2))
+elif texto_2 > texto_1:
+    print('{} es mayor a {}'.format(texto_2, texto_1))
+else:
+    print('Ambos son iguales')
 
-# De cada palabra debe tomar la primera letra y armar el acrónimo
-# Ejemplo: Alumbrado, barrido y limpieza --> ABL
-# Imprimir el resultado en pantalla
+# 2-Transforma esas variables tipo texto en variables numéricas con (int)
+# y almacénalas en nuevas variables.
+# Compare las nuevas variables para ver cual es mayor o menor
+# utilizando los operadores correspondientes
+# ¿Cuál de las nuevas variables es mayor?
+# Imprima en pantalla según corresponda
 
-var1 = palabra_1[0]
-var2 = palabra_2[0]
-var3 = palabra_3[0]
-print(var1+var2+var3)
+numero1 = int(texto_1)
+numero2 = int(texto_2)
+
+if numero1 > numero2:
+    print('{} es mayor a {}'.format(numero1, numero2))
+elif numero2 > numero1:
+    print('{} es mayor a {}'.format(numero2, numero1))
+else:
+    print('Ambos son iguales')
+
+# Para pensar!
+# ¿Por qué cree que texto_2 es mayor a texto_1?
+# Siendo números tiene sentido, pero son caracteres, texto,
+# aún así el operador arroja el mismo resultado que con las
+# variables numéricas, cierto? ¿Por qué creen que es así?
+# Esta pregunta estará repetida en el Campus para que puedan
+# responder.
+# NOTA: La respuesta no se encuentra en el apunte, sino en Google ;)
+
+#***********************RESPUESTA***********************
+#***********************RESPUESTA***********************
+#***********************RESPUESTA***********************
+
+'''Como en el caso de los numeros, las letras tienen valores numericos dependiendo
+su lugar en el alfabeto'''
